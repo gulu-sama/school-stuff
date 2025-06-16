@@ -34,14 +34,24 @@ void display(int arr[],int n){
 	}
 	printf("\n");
 }
+
+void inputArray(int arr[], int n) {
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+}
 int main() {
    
-    int arr[]={9,11,4,6,7};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    printf(" Array before sort :");
-    display(arr,n);
-    sort(arr,n);
-    printf(" Array after sort :");
+    int n;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    inputArray(arr, n);
+    printf("Array before sort: ");
+    display(arr, n);
+    sort(arr, n);
+    printf("Array after sort: ");
     display(arr,n);
 
     int target=6;
@@ -55,3 +65,16 @@ int main() {
 
     return 0;
 }
+
+/*
+Enter the number of elements in the array: 5
+Enter 5 elements:
+9
+11
+4
+6
+7
+Array before sort:  9  11  4  6  7 
+Array after sort:  4  6  7  9  11 
+ the target= 6 was found in the index :2 
+*/

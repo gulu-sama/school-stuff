@@ -1,7 +1,4 @@
-/*
- * C Program to Perform Merge Sort using Recursion and Functions
- */
- 
+
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -98,3 +95,4 @@ int main()
     printf("\n");
     return 0;
 }
+

@@ -101,3 +101,17 @@ void job_Sequencing_greedy(Job jobs[], int n) {
   }
   printf("\nMax Profit: %d\n", maxprofit);
 }
+
+/*
+       Job   Deadline     Profit
+        j4          2        300
+        j1          5        200
+        j3          3        190
+        j2          3        180
+        j5          4        120
+        j6          2        100
+dmax: 5
+
+Required Jobs: j2 --> j4 --> j3 --> j5 --> j1
+Max Profit: 990
+*/

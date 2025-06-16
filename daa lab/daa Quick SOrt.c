@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int partition(int arr[], int lo, int hi) {
     int pivot = arr[lo];  // pivot is the first element
@@ -6,18 +7,18 @@ int partition(int arr[], int lo, int hi) {
     int last = hi;
     int temp;
 
-    while(first < last) {
+    while (first < last) {
         // Find an element greater than the pivot
-        while(arr[first] <= pivot && first < hi) {
+        while (arr[first] <= pivot && first < hi) {
             first++;
         }
         // Find an element smaller than or equal to the pivot
-        while(arr[last] > pivot) {
+        while (arr[last] > pivot) {
             last--;
         }
 
         // Swap if first < last
-        if(first < last) {
+        if (first < last) {
             temp = arr[first];
             arr[first] = arr[last];
             arr[last] = temp;
@@ -33,7 +34,7 @@ int partition(int arr[], int lo, int hi) {
 }
 
 void quicksort(int arr[], int lo, int hi) {
-    if(lo < hi) {
+    if (lo < hi) {
         // Partition the array and get the pivot index
         int pivot = partition(arr, lo, hi);
 
@@ -44,15 +45,33 @@ void quicksort(int arr[], int lo, int hi) {
 }
 
 void display(int arr[], int n) {
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         printf(" %d ", arr[i]);
     }
     printf("\n");
 }
 
+void inputArray(int arr[], int n) {
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+}
+
 int main() {
-    int arr[] = {9, 11, 4, 6, 7};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int *arr = (int *)malloc(n * sizeof(int)); // Dynamically allocate memory for the array
+    if (arr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1; // Exit if memory allocation fails
+    }
+
+    inputArray(arr, n);
+
     printf("Array before sort: ");
     display(arr, n);
 
@@ -61,5 +80,14 @@ int main() {
     printf("Array after sort: ");
     display(arr, n);
 
+    free(arr); // Free the allocated memory
     return 0;
 }
+
+/*
+Enter the number of elements in the array: 5
+Enter 5 elements:
+9 11 4 6 7
+Array before sort:  9  11  4  6  7 
+Array after sort:  4  6  7  9  11 
+*/
