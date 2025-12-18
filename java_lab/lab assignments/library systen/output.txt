@@ -1,0 +1,58 @@
+Library Menu:
+1. Add Book
+2. Search Book
+3. Display Books
+4. Exit
+Select an option: 1
+Enter title: The Great Gatsby
+Enter author: F. Scott Fitzgerald
+Enter ISBN: 9780743273565
+Book added: The Great Gatsby
+
+Library Menu:
+1. Add Book
+2. Search Book
+3. Display Books
+4. Exit
+Select an option: 1
+Enter title: To Kill a Mockingbird
+Enter author: Harper Lee
+Enter ISBN: 9780061120084
+Book added: To Kill a Mockingbird
+
+Library Menu:
+1. Add Book
+2. Search Book
+3. Display Books
+4. Exit
+Select an option: 3
+Books in the Library:
+Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 9780743273565
+Title: To Kill a Mockingbird, Author: Harper Lee, ISBN: 9780061120084
+
+Library Menu:
+1. Add Book
+2. Search Book
+3. Display Books
+4. Exit
+Select an option: 2
+Enter title to search: The Great Gatsby
+Book found:
+Title: The Great Gatsby, Author: F. Scott Fitzgerald, ISBN: 9780743273565
+
+Library Menu:
+1. Add Book
+2. Search Book
+3. Display Books
+4. Exit
+Select an option: 2
+Enter title to search: Rick Morty
+Book not found.
+
+Library Menu:
+1. Add Book
+2. Search Book
+3. Display Books
+4. Exit
+Select an option: 4
+Exiting the system.
